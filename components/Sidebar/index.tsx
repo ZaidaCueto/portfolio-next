@@ -6,8 +6,6 @@ import { BsInstagram } from 'react-icons/bs';
 import { IoLogoWhatsapp } from 'react-icons/io';
 import Typewriter from "typewriter-effect";
 
-
-
 import { TbArrowBigDownLines } from 'react-icons/tb';
 
 export default function Sidebar() {
@@ -17,9 +15,11 @@ export default function Sidebar() {
                 width={200} height={200}
                 className="w-32 h-32 rounded-full max-auto"
             />
+            
 
-            <h3 className="my-4 text-3xl font-medium tracking-wider">
-                <span>Zaida</span>
+            <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
+                <span className="text-purple-700"> Olá ,  sou </span>
+                <span className="text-purple-500">Zaida </span>
                 Cueto
 
             </h3 >
@@ -44,7 +44,7 @@ export default function Sidebar() {
             </a>
             {/* social icons */}
             <h4 className="p-3 text-purple-900"> Social Media </h4>
-            <div className="flex justify-around w-9/12 text-purple-900 max-auto my-5max md:w-full">
+            <div className="flex justify-around w-9/12 text-purple max-auto my-5max md:w-full">
 
                 <a href="">
                     <AiFillGithub className="w-8 h-8 cursor-pointer" />
@@ -66,11 +66,16 @@ export default function Sidebar() {
                     <AiTwotoneMail className='w-6 mr-4 text-purple-900 h-9' />
                     Contato por  E-mail
                 </a>
-                <a href="https://wa.me/5511975692007 " className="flex items-center justify-center pb-4">
+                <a className="flex items-center justify-center pb-4">
                     <IoLogoWhatsapp className='w-6 h-6 mr-3 text-green-500 mmr-4' />
                     Contato por  Whatsapp
                 </a>
             </div>
+            
+            <button className="w-8/12 py-2 my-2 text-white rounded-full bg-gradient-to-r from-purple-900 to-purple-400 focus:outline-nome"
+            onClick={() =>  window.open(' mailto:zcueto58@gmail.com')}>
+                Contatar
+                </button>
 
 
         </div>

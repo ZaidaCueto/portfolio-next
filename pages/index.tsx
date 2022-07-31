@@ -4,15 +4,12 @@ import {
   GetServerSidePropsContext,
   GetStaticProps,
   GetStaticPropsContext,
-  // GetServerSideProps,
-  // GetServerSidePropsContext,
-  // GetStaticProps,
-  // GetStaticPropsContext,
+
   NextPage,
 } from 'next'
 import ServiceCard from '../components/ServiceCard'
 import { services } from '../data'
-import { fadeInUp, stagger } from '../animation'
+import { fadeInUp, stagger, routeAnimation } from '../animation'
 import {motion} from 'framer-motion'
 
 
@@ -20,13 +17,19 @@ const About: NextPage = () => {
   // console.log(services);
 
   return (
-    <div className="flex flex-col flex-grow px-6 pt-1">
+    <motion.div 
+    variants={routeAnimation} 
+    initial="initial" 
+    animate="animate" 
+    exit="exit" 
+    className="flex flex-col flex-grow px-6 pt-1"
+    >
       <h6 className="my-3 text-base font-medium">
         Atualmente sou programadora Front End participei do treinamento
         intensivo de capacitação , Gama Experience #41, disponibilizado pela{' '}
         <a href="https://www.gama.academy">
           <b>
-            <u className="text-green">Gama Academy</u>
+            <u className="text-green-400">Gama Academy</u>
           </b>
         </a>{' '}
         , para adquirir conhecimentos no stack de Hacker (Desenvolvimento Web
@@ -61,19 +64,19 @@ const About: NextPage = () => {
           ))}
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
 
-// export const getServerSideProps: GetServerSideProps = async (
-//    context: GetServerSidePropsContext
-// ) => {
-//    const res = await fetch('http://localhost:3000/api/services')
-//    const data = await res.json()
-//    console.log(data)
-//    return { props: { services: data.services } }
-// }
+export const getServerSideProps: GetServerSideProps = async (
+   context: GetServerSidePropsContext
+) => {
+   const res = await fetch('http://localhost:3000/api/services')
+   const data = await res.json()
+   console.log(data)
+   return { props: { services: data.services } }
+}
 
 
 

@@ -1,13 +1,18 @@
 import Bar from '../components/Bar'
 import { languages, tools } from '../data'
 import {motion} from 'framer-motion'
-import {fadeInUp} from '../animation'
+import {fadeInUp, routeAnimation} from '../animation'
 
 const resume = () => {
   
 
   return (
-    <div className="px-6 py-2">
+    <motion.div className="px-6 py-2"
+    variants={routeAnimation} 
+    initial="initial" 
+    animate="animate" 
+    exit="exit" 
+    >
       {/* //! Education & Experience */}
       <div className="grid gap-6 md:grid-cols-2">
         <motion.div variants={fadeInUp} initial="initial" animate="animate" >
@@ -15,37 +20,22 @@ const resume = () => {
           <h5 className="my-3 text-2xl font-bold">Education</h5>
           <div className="">
             <h5 className="my-2 text-xl font-bold">
-              Computer Science Engineering
+          Dsenvolvedor Web full stack
             </h5>
-            <p className="font-semibold">Academy of Technology (2017-2021)</p>
+            <p className="font-semibold">Gama Academy (2022)</p>
             <p className="my-3">
-              I am currently pursuing B.tech in Computer Science Engineering
-              from Academy of Technology
+            Formada em desenvolvimento web com especialização em frontend
             </p>
-            <h5 className="my-2 text-xl font-bold">
-              Computer Science Engineering
-            </h5>
-            <p className="font-semibold">Academy of Technology (2017-2021)</p>
-            <p className="my-3">
-              I am currently pursuing B.tech in Computer Science Engineering
-              from Academy of Technology
-            </p>
-            <h5 className="my-2 text-xl font-bold">
-              Computer Science Engineering
-            </h5>
-            <p className="font-semibold">Academy of Technology (2017-2021)</p>
-            <p className="my-3">
-              I am currently pursuing B.tech in Computer Science Engineering
-              from Academy of Technology
-            </p>
+          
           </div>
         </motion.div>
         <motion.div  variants={fadeInUp} initial="initial" animate="animate">
-          <h5 className="my-3 text-2xl font-bold">Experience</h5>
+          <h5 className="my-3 text-2xl font-bold">Experiencia</h5>
           <div className="">
-            <h5 className="my-2 text-xl font-bold">Software Developer Jr.</h5>
-            <p className="font-semibold">Tata Consultancy Services</p>
-            <p className="my-3">I dont know why I am doing this job</p>
+            {/* <h5 className="my-2 text-xl font-bold"> </h5> */}
+            {/* <p className="font-semibold"> </p> */}
+            <p className="my-3"> Criando sites estatísticos usando HTML, CSS,
+javascript, typescript e react. em projetos para praticar e desafios</p>
           </div>
         </motion.div>
       </div>
@@ -72,7 +62,7 @@ const resume = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 export default resume

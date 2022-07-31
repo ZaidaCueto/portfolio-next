@@ -7,7 +7,7 @@ import { IoLogoWhatsapp } from 'react-icons/io'
 import Typewriter from 'typewriter-effect'
 import { useTheme } from 'next-themes'
 import { TbArrowBigDownLines } from 'react-icons/tb'
-import { useRef } from 'react'
+
 
 export default function Sidebar() {
   const { theme, setTheme } = useTheme()
@@ -52,8 +52,8 @@ export default function Sidebar() {
 
       <a
         className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-purple-900 dark:text-purple-200"
-        href=""
-        download="name"
+        href="https://drive.google.com/file/d/1YJUSMYc-Z4y6lV5mcVYx3rvXzEGHOURm/view?usp=sharing"
+        download="curriculo-zaida.pdf"
       >
         <TbArrowBigDownLines className="w-6 h-6" />
         Download Resume

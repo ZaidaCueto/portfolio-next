@@ -95,6 +95,7 @@ export const tools: ISkill[] = [
 
 export const projects: IProject[] = [
   {
+    id: 1,
     name: 'Desafio Chefao',
     image_path:
       'https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/figmaPRPS.png?raw=true',
@@ -106,6 +107,7 @@ export const projects: IProject[] = [
     key_techs: ['react', 'typescript', 'bootstrap', 'figma'],
   },
   {
+    id: 2,
     name: 'Project 2',
     image_path:
       'https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/embreve.png?raw=true',
@@ -118,6 +120,7 @@ export const projects: IProject[] = [
     key_techs: ['react', 'typescript', 'bootstrap'],
   },
   {
+    id: 3,
     name: 'Project 3',
     image_path:
       'https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/embreve.png?raw=true',
@@ -130,6 +133,7 @@ export const projects: IProject[] = [
     key_techs: ['react', 'typescript', 'bootstrap', 'figma'],
   },
   {
+    id: 4,
     name: 'Project 4',
     image_path:
       'https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/embreve.png?raw=true',
@@ -142,6 +146,7 @@ export const projects: IProject[] = [
     key_techs: ['react', 'typescript', 'bootstrap', 'figma'],
   },
   {
+    id: 5,
     name: 'Project 5',
     image_path:
       'https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/embreve.png?raw=true',
@@ -154,6 +159,7 @@ export const projects: IProject[] = [
     key_techs: ['react', 'typescript', 'bootstrap'],
   },
   {
+    id: 6,
     name: 'Project 6',
     image_path:
       'https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/embreve.png?raw=true',
@@ -166,6 +172,7 @@ export const projects: IProject[] = [
     key_techs: ['react', 'typescript', 'bootstrap'],
   },
   {
+    id: 7,
     name: 'Project 7',
     image_path:
       'https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/embreve.png?raw=true',
@@ -178,6 +185,7 @@ export const projects: IProject[] = [
     key_techs: ['react', 'typescript', 'bootstrap'],
   },
   {
+    id: 8,
     name: 'Project 8',
     image_path:
       'https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/embreve.png?raw=true',
@@ -190,6 +198,7 @@ export const projects: IProject[] = [
     key_techs: ['react', 'typescript', 'bootstrap'],
   },
   {
+    id: 9,
     name: 'Project 9',
     image_path:
       'https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/embreve.png?raw=true',
@@ -202,6 +211,7 @@ export const projects: IProject[] = [
     key_techs: ['react', 'typescript', 'bootstrap'],
   },
   //   {
+  //     id: 10,
   // name:"Project 11",
   // image_path:"https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/embreve.png?raw=true",
   // deployed_url:"#",
@@ -212,6 +222,7 @@ export const projects: IProject[] = [
   // key_techs:["react","typescript","bootstrap"],
   //   },
   //   {
+  //     id: 11,
   // name:"Project 12",
   // image_path:"https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/embreve.png?raw=true",
   // deployed_url:"",

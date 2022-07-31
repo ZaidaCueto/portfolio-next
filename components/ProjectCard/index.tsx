@@ -7,8 +7,11 @@ import { animate, motion } from 'framer-motion'
 import { fadeInUp, stagger } from '../../animation'
 const ProjectCard: FunctionComponent<{
   project: IProject
+  showDetail: null|number;
+  setShowDetail: (id: number | null) => void;
 }> = ({
   project: {
+    id,
     name,
     image_path,
     category,
@@ -17,16 +20,20 @@ const ProjectCard: FunctionComponent<{
     github_url,
     key_techs,
   },
-}) => {
-    const [showDetail, setShowDetail] = useState(false)
 
+}) => {
+    const [showDetail, setShowDetail] = useState<number | null>(null)
+    
+  
+    
+    
     return (
       <div>
         <Image
           src={image_path}
           alt={name}
           className="cursor-pointer"
-          onClick={() => setShowDetail(true)}
+          onClick={() => setShowDetail(id)}
           layout="responsive"
           height="150"
           width="300"
@@ -34,11 +41,13 @@ const ProjectCard: FunctionComponent<{
 
         <p className="my-2 text-center">{name}</p>
 
-        {showDetail && (
-          <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-purple-900">
+        {showDetail === id && (
+          <div className="absolute top-0 left-0 z-10 grid w-full h-auto text-black bg-purple-400 rounded-xl p-7 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-purple-900">
             <motion.div >
               {/* <img src={image_path} alt={name} /> */}
-              <motion.div variants={fadeInUp} initial="initial" animate="animate" >
+              <motion.div variants={fadeInUp} initial="initial" animate="animate" 
+              className="border-4 border-purple-900 rounded-lg shadow-lg">
+              
                 <Image
                   src={image_path}
                   alt={name}
@@ -81,7 +90,7 @@ const ProjectCard: FunctionComponent<{
             </motion.div>
 
             <button
-              onClick={() => setShowDetail(false)}
+              onClick={() => setShowDetail(null)}
               className="absolute p-1 bg-purple-200 rounded-full top-3 right-3 focus:outline-none dark:bg-purple-400"
             >
               <MdClose size={30} />

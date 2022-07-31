@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { fadeInUp, stagger } from '../animation'
+import { fadeInUp, routeAnimation, stagger } from '../animation'
 import ProjectCard from '../components/ProjectCard'
 import ProjectsNavbar from '../components/ProjectsNavbar'
 import { projects as projectsData } from '../data'
@@ -9,6 +9,7 @@ import { Category } from '../types'
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData)
   const [active, setActive] = useState('all')
+  const [showDetail, setShowDetail] = useState<number | null >(null)
 
   const handlerFilterCategory = (category: Category | 'all') => {
     if (category === 'all') {
@@ -25,7 +26,12 @@ const Projects = () => {
   }
 
   return (
-    <div className="px-5 py-2 overflow-y-scroll" style={{ height: '65vh' }}>
+    <motion.div 
+    variants={routeAnimation} 
+    initial="initial" 
+    animate="animate" 
+    exit="exit" 
+    className="px-5 py-2 overflow-y-auto " style={{ height: '65vh' }}>
       <ProjectsNavbar
         handlerFilterCategory={handlerFilterCategory}
         active={active}
@@ -44,11 +50,11 @@ const Projects = () => {
             initial="initial"
             animate="animate"
           >
-            <ProjectCard project={project} />
+            <ProjectCard project={project}  showDetail={showDetail}  setShowDetail={setShowDetail}/>
           </motion.div>
         ))}
       </motion.div>
-    </div>
+    </motion.div>
   )
 }
 

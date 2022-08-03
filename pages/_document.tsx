@@ -1,5 +1,4 @@
-import Document, { Html, , Main, NextScript } from 'next/document'
-import Head from 'next/head'
+import Document, { Html,Head,  Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
   render() {
@@ -19,8 +18,7 @@ class MyDocument extends Document {
           name='keywords'
           content='Frontend devloper, full stack web developer, '
           />
-         
-        <title>Web developer │ Prtfoio  │ Frontend </title>
+
       
           
         </Head>

@@ -13,8 +13,8 @@ import { fadeInUp, stagger, routeAnimation } from '../animation'
 import {motion} from 'framer-motion'
 
 
-const About: NextPage = () => {
-  // console.log(services);
+const About = ({endpoint}:{endpoint:string,}) => {
+   console.log(endpoint)
 
   return (
     <motion.div 
@@ -72,10 +72,10 @@ const About: NextPage = () => {
 export const getServerSideProps: GetServerSideProps = async (
    context: GetServerSidePropsContext
 ) => {
-   const res = await fetch('http://localhost:3000/api/services')
-   const data = await res.json()
-   console.log(data)
-   return { props: { services: data.services } }
+  //  const res = await fetch (`${process.env.VERCEL_URL}/api/services`)
+  //  const data = await res.json()
+  //  console.log(data)
+   return { props: { endpoint: process.env.VERCEL_URL} }
 }
 
 
@@ -92,3 +92,7 @@ export const getServerSideProps: GetServerSideProps = async (
 //  }
 
 export default About
+function endpoint(endpoint: any) {
+  throw new Error('Function not implemented.')
+}
+

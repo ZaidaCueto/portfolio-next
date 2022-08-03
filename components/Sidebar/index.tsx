@@ -24,7 +24,7 @@ export default function Sidebar() {
        className="w-32 h-32 rounded-full max-auto"
       src="https://github.com/ZaidaCueto/portfolio-react/blob/master/public/images/imgPerfil.png?raw=true" 
       quality="100"
-      width="128"
+      width="135"
       height="128"
       alt="user avatar"
       title="user avatar"
@@ -65,13 +65,13 @@ export default function Sidebar() {
       </h4>
       <div className="flex justify-around w-9/12 text-purple-900 dark:text-purple-200 max-auto my-5max md:w-full">
         <a href="https://github.com/ZaidaCueto">
-          <AiFillGithub className="w-8 h-8 cursor-pointer" />
+          <AiFillGithub className="w-8 h-8 cursor-pointer" area-aria-label='gituhb' />
         </a>
         <a href="https://www.linkedin.com/in/zaidacuetoa">
-          <AiFillLinkedin className="w-8 h-8 cursor-pointer" />
+          <AiFillLinkedin className="w-8 h-8 cursor-pointer"  area-aria-label='linkedin'/>
         </a>
         <a href="https://www.instagram.com/dev.iniciante2022">
-          <BsInstagram className="w-8 h-8 cursor-pointer" />
+          <BsInstagram className="w-8 h-8 cursor-pointer" area-aria-label='instagram' />
         </a>
       </div>
       {/* address */}

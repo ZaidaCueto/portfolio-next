@@ -11,6 +11,7 @@ import ServiceCard from '../components/ServiceCard'
 import { services } from '../data'
 import { fadeInUp, stagger, routeAnimation } from '../animation'
 import {motion} from 'framer-motion'
+import Head from 'next/head'
 
 
 const About = ({endpoint}:{endpoint:string,}) => {
@@ -24,6 +25,9 @@ const About = ({endpoint}:{endpoint:string,}) => {
     exit="exit" 
     className="flex flex-col flex-grow px-6 pt-1"
     >
+      <Head>
+        <title>Web developer │ Protfolio │ Frontend </title>
+      </Head>
       <h6 className="my-3 text-base font-medium">
         Atualmente sou programadora Front End participei do treinamento
         intensivo de capacitação , Gama Experience #41, disponibilizado pela{' '}

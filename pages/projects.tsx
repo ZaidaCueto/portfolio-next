@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Head from 'next/head'
 import { useState } from 'react'
 import { fadeInUp, routeAnimation, stagger } from '../animation'
 import ProjectCard from '../components/ProjectCard'
@@ -32,6 +33,9 @@ const Projects = () => {
     animate="animate" 
     exit="exit" 
     className="px-5 py-2 overflow-y-auto " style={{ height: '65vh' }}>
+       <Head>
+        <title>Web developer │ rojects  │ Frontend </title>
+      </Head>
       <ProjectsNavbar
         handlerFilterCategory={handlerFilterCategory}
         active={active}
